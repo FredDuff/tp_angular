@@ -1,0 +1,5 @@
+<h1>Modifier Tweet {{ tw.id }}</h1>
+
+<app-tw-form-add [tw]="tw" (twEvent)="goBack()"></app-tw-form-add>
+
+<button (click)="goBack()">Retour</button>

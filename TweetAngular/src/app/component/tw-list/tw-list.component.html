@@ -1,0 +1,11 @@
+<h1>Tweets</h1>
+
+<app-tw-form-add [tw]="addTw" (twEvent)="receiveTw($event)"></app-tw-form-add>
+
+<div *ngFor="let tw of tws">
+  <p>{{ tw.message }}</p>
+  <p>{{ tw.created_at | date:'dd/MM/yyyy' }}</p>
+  <button class="delete" title="Supprimer le tweet"
+  (click)="deleteTw(tw)">x</button>
+  <a routerLink="/tw/{{tw.id}}">Editer</a>
+</div>
